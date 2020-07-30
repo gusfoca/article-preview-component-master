@@ -23,14 +23,23 @@
 /*                                    End of Font includes  
 /*==========================================================*/
 
+/*                                      ____________________
+/*======================================    Dev css
+*/
+
+* {
+    /* outline: solid 1px black; */
+}
+
+/*                                    End of Dev css  
+/*==========================================================*/
 
 /*                                      ____________________
 /*======================================    Container Layer
 */
 
 * {
-    box-sizing: border-box;
-    outline: solid 1px black;
+    box-sizing: border-box;    
 }
 
 html {
@@ -46,8 +55,40 @@ html {
 /*======================================    Inner Layer
 */
 
-.author {
+.body-footer {
+    position: relative;
+}
+
+.author-data, .author-data > div {
     display: inline-block;
+}
+
+.author-data {
+    /* display: none; */
+}
+
+.share-footer {
+    display: inline-block;
+    display: none;
+    background-color: hsl(217, 19%, 35%);
+    width: 100%;
+}
+
+.share-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    --img-radius: 20px; 
+    width: calc(2 * var(--img-radius));
+    height: calc(2 * var(--img-radius));
+    border: solid var(--img-radius) lightgray;
+    border-radius: var(--img-radius);   
+}
+
+.share-img {
+    position: relative;
+    left: -7.5px;
+    top: -7.5px;
 }
 
 .attribution {
