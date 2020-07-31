@@ -28,7 +28,7 @@
 */
 
 * {
-    /* outline: solid 1px black; */
+    outline: solid 1px black;
 }
 
 /*                                    End of Dev css  
@@ -39,11 +39,52 @@
 */
 
 * {
-    box-sizing: border-box;    
+    box-sizing: border-box;   
+    padding: 0;
+    margin: 0; 
 }
 
 html {
     font-family: 'Manrope', 'sans-serif';
+    --width-delta: calc((100vw - 375px) / 1065);
+}
+
+main {
+    position: relative;
+    --article-body-width: max(327px, min(445px, calc(327px + 118 * var(--width-delta))));
+    --article-body-height: max(280px, min(312px, calc(312px - 32 * var(--width-delta))));
+}
+
+section.article-image {
+    position: absolute;
+    z-index: -1;
+    /* display: none; */
+}
+
+section.article-image > img {
+    width: var(--article-body-width);
+    height: var(--article-body-height);
+    object-fit: cover;
+}
+
+.img-block {
+    display: inline-block;
+    width: max(286px, min(327px, calc(327px - 41 * var(--width-delta))));       /* 327-286px */
+    height: max(200px, min(280px, calc(200px + 80 * var(--width-delta))));      /* 200-280px */
+}
+
+section.article-body {
+    display: inline-block;
+    width: var(--article-body-width);
+    height: var(--article-body-height);
+    background-color: white;
+    vertical-align: top;
+}
+
+.author-data > img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
 }
 
 
