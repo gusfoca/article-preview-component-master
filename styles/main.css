@@ -76,7 +76,7 @@ section.article-body {
     vertical-align: top;
 }
 
-.author-data > img {
+.author-info > img {
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -91,16 +91,38 @@ section.article-body {
 /*======================================    Inner Layer
 */
 
+h2 {
+    font-size: 16px;
+    word-spacing: 1px;
+    line-height: 24.4px;
+}
+
+.article-body > p {
+    font-size: 13px;
+    word-spacing: 0.8px;
+    line-height: 20px;
+}
+
 .body-footer {
     position: relative;
 }
 
-.author-data, .author-data > div {
+.author-info, .author-info > div {
     display: inline-block;
 }
 
-.author-data {
+.author-info {
     /* display: none; */
+}
+
+.author-info > div {
+    font-size: 13px;
+}
+
+.author-info .author-name {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
 }
 
 .share-footer {
