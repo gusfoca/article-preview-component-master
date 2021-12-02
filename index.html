@@ -5,49 +5,59 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
         <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/desktop.css">
+        <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./styles/styles.css">
+        <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            body {
+                font-family: 'Manrope', 'sans-serif';                
+            }
+        </style>
 
         <title>Frontend Mentor | Article preview component</title>
 
     </head>
-    <body>
+    <body class="overflow-hidden">
         <main>
-            <section class="article-image">
-                <img src="./images/drawers.jpg" alt="drawers">
-            </section><!--
-         --><section class="article-body">
-                <h2>
-                    Shift the overall look and feel by adding these wonderful 
-                    touches to furniture in your home
-                </h2>
-                <p>
-                    Ever been in a room and felt like something was missing? Perhaps 
-                    it felt slightly bare and uninviting. I’ve got some simple tips 
-                    to help you make any room feel complete.
-                </p>
-                <div class="body-footer">
-                    <div class="author-info">
-                        <img src="./images/avatar-michelle.jpg" alt="avatar">
-                        <div>
-                            <span class="author-name">Michelle Appleton</span><br>
-                            28 Jun 2020
+            <div class="row">
+                <div class="col-12 col-md-5" style="height: 67vw;">
+                    <img src="./images/drawers.jpg" alt="drawers" class="w-100 h-100" 
+                        style="object-fit: cover; object-position: left top;">
+                </div><!--
+            --><div class="col-12 col-md-7" style="padding: 50px 30px 20px 30px;">
+                    <h5 class="fw-bold pb-2">
+                        Shift the overall look and feel by adding these wonderful 
+                        touches to furniture in your home
+                    </h5>
+                    <p class="pb-3">
+                        Ever been in a room and felt like something was missing? Perhaps 
+                        it felt slightly bare and uninviting. I’ve got some simple tips 
+                        to help you make any room feel complete.
+                    </p>
+                    <div class="d-flex" style="align-items: center;">
+
+                        <img src="./images/avatar-michelle.jpg" alt="avatar" class="rounded-circle"
+                            style="height: 50px;">
+                        <div class="ms-3">
+                            <div class="fw-bold">Michelle Appleton</div>
+                            <div>28 Jun 2020</div>
+                        </div>
+                        <!-- <div class="share-footer">
+                            Share
+                            <img src="./images/icon-facebook.svg" alt="facebook share icon">
+                            <img src="./images/icon-twitter.svg" alt="twitter share icon">
+                            <img src="./images/icon-pinterest.svg" alt="pinterest share icon">
+                        </div> -->
+                        <div class="ms-auto">
+                            <img src="./images/icon-share.svg" alt="share icon"
+                                style="padding: 10px;" class="rounded-circle bg-light">
                         </div>
                     </div>
-                    <div class="share-footer">
-                        Share
-                        <img src="./images/icon-facebook.svg" alt="facebook share icon">
-                        <img src="./images/icon-twitter.svg" alt="twitter share icon">
-                        <img src="./images/icon-pinterest.svg" alt="pinterest share icon">
-                    </div>
-                    <div class="share-icon">
-                        <img class="share-img" src="./images/icon-share.svg" alt="share icon">
-                    </div>
                 </div>
-            </section>
+            </div>
         </main>
         <footer>
-            <p class="attribution">
+            <p class="attribution px-4 bg-light">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
             Coded by <em><a href="#">gusfoca</a></em>.
             </p>
