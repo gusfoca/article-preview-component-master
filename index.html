@@ -55,34 +55,37 @@
                         to help you make any room feel complete.
                     </p>                                     
                 </div>
-                <div id="info-footer" class="d-flex"
+                <div id="footer" class="d-flex"
                     style="align-items: center; padding: 20px 30px;">
 
-                    <img src="./images/avatar-michelle.jpg" alt="avatar" class="rounded-circle"
-                        style="height: 50px;">
-                    <div class="ms-3" style="font-size: 0.93em;">
-                        <div class="fw-bold">Michelle Appleton</div>
-                        <div>28 Jun 2020</div>
+                    <div id="info-footer" class="d-flex">
+                        <img src="./images/avatar-michelle.jpg" alt="avatar" class="rounded-circle"
+                            style="height: 50px;">
+                        <div class="ms-3" style="font-size: 0.93em;">
+                            <div class="fw-bold">Michelle Appleton</div>
+                            <div>28 Jun 2020</div>
+                        </div>
+                    </div>
+                    <div id="share-footer" class="d-none">
+                        <span class="text-muted">Share</span>
+                        <img src="./images/icon-facebook.svg" alt="facebook share icon">
+                        <img src="./images/icon-twitter.svg" alt="twitter share icon">
+                        <img src="./images/icon-pinterest.svg" alt="pinterest share icon">
+    
+                        <div class="ms-auto">
+                            <img src="./images/icon-share.svg" alt="share icon"
+                                style="padding: 10px;" class="rounded-circle bg-light"
+                                id="share-footer-button" >
+                        </div> 
                     </div>
                     
                     <div class="ms-auto">
                         <img src="./images/icon-share.svg" alt="share icon"
                             style="padding: 10px;" class="rounded-circle bg-light"
-                            id="info-footer-button" >
+                            id="share-button" >
                     </div>                        
                 </div>   
-                <div id="share-footer" class="d-none" style="padding: 20px 30px;">
-                    <span class="text-muted">Share</span>
-                    <img src="./images/icon-facebook.svg" alt="facebook share icon">
-                    <img src="./images/icon-twitter.svg" alt="twitter share icon">
-                    <img src="./images/icon-pinterest.svg" alt="pinterest share icon">
-
-                    <div class="ms-auto">
-                        <img src="./images/icon-share.svg" alt="share icon"
-                            style="padding: 10px;" class="rounded-circle bg-light"
-                            id="share-footer-button" >
-                    </div> 
-                </div>
+                
             </div>
         </main>
         <!-- <footer>
@@ -92,13 +95,18 @@
             </p>
         </footer> -->
         <script>
-            document.getElementById("info-footer-button").onclick = event => {
-                document.getElementById("info-footer").className = "d-none";
-                document.getElementById("share-footer").className = "d-flex bg-dark";
-            };
-            document.getElementById("share-footer-button").onclick = event => {
-                document.getElementById("info-footer").className = "d-flex";
-                document.getElementById("share-footer").className = "d-none";
+            let activeState = false;
+            document.getElementById("share-button").onclick = event => {
+                if(!activeState) {
+                    document.getElementById("info-footer").className = "d-none";
+                    document.getElementById("share-footer").className = "d-flex";
+                    document.getElementById("footer").className = "d-flex bg-dark";
+                } else {
+                    document.getElementById("info-footer").className = "d-flex";
+                    document.getElementById("share-footer").className = "d-none";
+                    document.getElementById("footer").className = "d-flex";
+                }
+                activeState = !activeState;
             };
         </script>
     </body>
