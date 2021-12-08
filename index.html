@@ -67,16 +67,16 @@
                                 <div>28 Jun 2020</div>
                             </div>
                         </div>
-                        <div id="share-footer" class="d-none" style="align-items: center;">
-                            <span class="text-muted">Share</span>
+                        <div id="share-footer" class="d-none" style="align-items: center; width: 170px;">
+                            <span class="text-muted" style="letter-spacing: 4px; font-size: 0.85em;" >SHARE</span>
                             <img src="./images/icon-facebook.svg" alt="facebook share icon">
                             <img src="./images/icon-twitter.svg" alt="twitter share icon">
                             <img src="./images/icon-pinterest.svg" alt="pinterest share icon">
                         </div>
                         
-                        <div class="ms-auto">
+                        <div class="ms-auto rounded-circle bg-light">
                             <img src="./images/icon-share.svg" alt="share icon"
-                                style="padding: 10px;" class="rounded-circle bg-light"
+                                style="padding: 10px; overflow: hidden;"
                                 id="share-button" >
                         </div>                        
                     </div>   
@@ -94,7 +94,7 @@
             document.getElementById("share-button").onclick = event => {
                 if(!activeState) {
                     document.getElementById("info-footer").className = "d-none";
-                    document.getElementById("share-footer").className = "d-flex";
+                    document.getElementById("share-footer").className = "d-flex justify-content-between";
                     document.getElementById("footer").className = "d-flex bg-dark";
                 } else {
                     document.getElementById("info-footer").className = "d-flex";
