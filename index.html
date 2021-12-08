@@ -67,8 +67,12 @@
                                 <div>28 Jun 2020</div>
                             </div>
                         </div>
-                        <div id="share-footer" class="d-none" style="align-items: center; width: 170px;">
-                            <span class="text-muted" style="letter-spacing: 4px; font-size: 0.85em;" >SHARE</span>
+                        <div id="share-footer" class="d-none"
+                            style="align-items: center; width: 170px;">
+                            <span class=""
+                            style="letter-spacing: 4px; font-size: 0.85em; color: hsl(212, 23%, 69%);" >
+                                SHARE
+                            </span>
                             <img src="./images/icon-facebook.svg" alt="facebook share icon">
                             <img src="./images/icon-twitter.svg" alt="twitter share icon">
                             <img src="./images/icon-pinterest.svg" alt="pinterest share icon">
@@ -95,11 +99,11 @@
                 if(!activeState) {
                     document.getElementById("info-footer").className = "d-none";
                     document.getElementById("share-footer").className = "d-flex justify-content-between";
-                    document.getElementById("footer").className = "d-flex bg-dark";
+                    document.getElementById("footer").style.backgroundColor = "hsl(217, 19%, 35%)";
                 } else {
                     document.getElementById("info-footer").className = "d-flex";
                     document.getElementById("share-footer").className = "d-none";
-                    document.getElementById("footer").className = "d-flex";
+                    document.getElementById("footer").style.backgroundColor = "white";
                 }
                 activeState = !activeState;
             };
