@@ -16,6 +16,7 @@
                 padding: 0;
             }            
             main {
+                position: relative;
                 margin: 11% auto;
                 padding: 0;
                 /* border-radius: 10px; */
@@ -42,7 +43,13 @@
             #footer {
                 align-items: center;
                 padding: 25px 35px;
-                height: 35px;
+                height: 65px;
+            }
+            #share-bubble {
+                display: none;
+            }
+            #bubble-arrow {
+                display: none;
             }
         </style>
         <style media="(min-width: 768px)">
@@ -66,9 +73,9 @@
                 position: relative;
                 padding-top: 0px;
                 align-items: flex-start;
+                height: 35px;
             }
             #share-bubble {
-                display: none;
                 position: absolute;
                 justify-content: space-between;
                 align-items: center;
@@ -77,16 +84,15 @@
                 border-radius: 10px;
                 width: 250px;
                 height: 55px;
-                bottom: 170px;
-                right: 215px;
+                bottom: 86px;
+                right: -60px;
             }
             #bubble-arrow {
-                display: none;
                 position: absolute;
                 border: 15px solid transparent;
                 border-top: 15px solid hsl(217, 19%, 35%);
-                bottom: 140px;
-                right: 335px;
+                bottom: 56px;
+                right: 55px;
             }
         </style>
 
