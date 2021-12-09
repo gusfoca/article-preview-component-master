@@ -30,6 +30,9 @@
             .copy-heading {
                 font-size: 1.2em;
             }
+            #share-footer {
+                display: none;
+            }
             #footer {
                 align-items: center;
                 padding: 25px 35px;
@@ -59,7 +62,7 @@
                 align-items: flex-start;
             }
             #share-float {
-                display: flex;
+                display: none;
                 position: absolute;
                 justify-content: space-between;
                 align-items: center;
@@ -72,6 +75,7 @@
                 right: -70px;
             }
             #bubble-arrow {
+                display: none;
                 position: absolute;
                 border: 15px solid transparent;
                 border-top: 15px solid hsl(217, 19%, 35%);
@@ -112,8 +116,7 @@
                                 <div>28 Jun 2020</div>
                             </div>
                         </div>
-                        <div id="share-footer" class="d-none"
-                            style="align-items: center; width: 170px;">
+                        <div id="share-footer" style="align-items: center; width: 170px;">
                             <span class=""
                                 style="letter-spacing: 4px; color: hsl(212, 23%, 69%);" >
                                 SHARE
@@ -122,7 +125,7 @@
                             <img src="./images/icon-twitter.svg" alt="twitter share icon">
                             <img src="./images/icon-pinterest.svg" alt="pinterest share icon">
                         </div>
-                        <div id="share-float" class="shadow d-none">
+                        <div id="share-float" class="shadow">
                             <span style="letter-spacing: 4px; color: hsl(212, 23%, 69%);" >
                                 SHARE
                             </span>
@@ -130,7 +133,7 @@
                             <img src="./images/icon-twitter.svg" alt="twitter share icon">
                             <img src="./images/icon-pinterest.svg" alt="pinterest share icon">
                         </div>
-                        <div id="bubble-arrow" class="d-none"></div>
+                        <div id="bubble-arrow"></div>
                         
                         <div class="ms-auto rounded-circle bg-light">
                             <img src="./images/icon-share.svg" alt="share icon"
@@ -149,22 +152,26 @@
         </footer> -->
         <script>
             let activeState = false;
-            document.getElementById("share-button").onclick = event => {
+            const activateEvent = () => {
+                document.getElementById("share-float").style.display = "none";
+                document.getElementById("bubble-arrow").style.display = "none";
+                document.getElementById("share-footer").className = "d-none";
+                document.getElementById("info-footer").className = "d-flex";   
+                document.getElementById("footer").style.backgroundColor = "white";
                 if(!activeState) {
                     if(window.outerWidth < 768) {
                         document.getElementById("info-footer").className = "d-none";
                         document.getElementById("share-footer").className = "d-flex justify-content-between";
                         document.getElementById("footer").style.backgroundColor = "hsl(217, 19%, 35%)";
                     } else {
-
+                        document.getElementById("share-float").style.display = "flex";
+                        document.getElementById("bubble-arrow").style.display = "block";
                     }
-                } else {
-                    document.getElementById("info-footer").className = "d-flex";
-                    document.getElementById("share-footer").className = "d-none";
-                    document.getElementById("footer").style.backgroundColor = "white";
                 }
                 activeState = !activeState;
             };
+            window.onresize = () => { console.log('res'); activateEvent(); activateEvent(); };
+            document.getElementById("share-button").onclick = activateEvent;
         </script>
     </body>
 </html>
