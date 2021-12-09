@@ -17,9 +17,15 @@
             }            
             main {
                 margin: 11% auto;
-                border-radius: 10px;
+                padding: 0;
+                /* border-radius: 10px; */
                 /* overflow: hidden; */
                 width: 330px;
+            }
+            #main-container {
+                overflow: hidden;
+                padding: 0;
+                border-radius: 10px;
             }
             .img-wrapper {
                 height: 235px;
@@ -36,14 +42,14 @@
             #footer {
                 align-items: center;
                 padding: 25px 35px;
-                height: 65px;
+                height: 35px;
             }
         </style>
         <style media="(min-width: 768px)">
             .img-wrapper {
                 width: 288px;
                 height: 285px;
-            }
+            }            
             main {
                 margin: 33vh auto;
                 padding: 0;
@@ -71,16 +77,16 @@
                 border-radius: 10px;
                 width: 250px;
                 height: 55px;
-                top: -90px;
-                right: -70px;
+                bottom: 170px;
+                right: 215px;
             }
             #bubble-arrow {
                 display: none;
                 position: absolute;
                 border: 15px solid transparent;
                 border-top: 15px solid hsl(217, 19%, 35%);
-                top: -35px;
-                right: 40px;
+                bottom: 140px;
+                right: 335px;
             }
         </style>
 
@@ -89,60 +95,62 @@
     </head>
     <body>
         <main>
-            <div class="row">
-                <div class="img-wrapper col-12 col-md-5 p-0">
-                    <img src="./images/drawers.jpg" alt="drawers" class="w-100 h-100"
-                        style="object-fit: cover; object-position: left top;">
-                </div><!--
-            --><div class="body-wrapper col-12 col-md-7">
-                    <div class="copy-wrapper">
-                        <h5 class="copy-heading fw-bold pb-2" style="line-height: 1.4em;">
-                            Shift the overall look and feel by adding these wonderful 
-                            touches to furniture in your home
-                        </h5>
-                        <p class="pb-3" style="font-size: 1.01em;">
-                            Ever been in a room and felt like something was missing? Perhaps 
-                            it felt slightly bare and uninviting. I’ve got some simple tips 
-                            to help you make any room feel complete.
-                        </p>
-                    </div>
-                    <div id="footer" class="d-flex">
+            <div id="main-container">
+                <div class="row">
+                    <div class="img-wrapper col-12 col-md-5 p-0">
+                        <img src="./images/drawers.jpg" alt="drawers" class="w-100 h-100"
+                            style="object-fit: cover; object-position: left top;">
+                    </div><!--
+                --><div class="body-wrapper col-12 col-md-7">
+                        <div class="copy-wrapper">
+                            <h5 class="copy-heading fw-bold pb-2" style="line-height: 1.4em;">
+                                Shift the overall look and feel by adding these wonderful 
+                                touches to furniture in your home
+                            </h5>
+                            <p class="pb-3" style="font-size: 1.01em;">
+                                Ever been in a room and felt like something was missing? Perhaps 
+                                it felt slightly bare and uninviting. I’ve got some simple tips 
+                                to help you make any room feel complete.
+                            </p>
+                        </div>
+                        <div id="footer" class="d-flex">
 
-                        <div id="info-footer" class="d-flex" style="align-items: center;">
-                            <img src="./images/avatar-michelle.jpg" alt="avatar" class="rounded-circle"
-                                style="height: 40px;">
-                            <div class="ms-3">
-                                <div class="fw-bold">Michelle Appleton</div>
-                                <div>28 Jun 2020</div>
+                            <div id="info-footer" class="d-flex" style="align-items: center;">
+                                <img src="./images/avatar-michelle.jpg" alt="avatar" class="rounded-circle"
+                                    style="height: 40px;">
+                                <div class="ms-3">
+                                    <div class="fw-bold">Michelle Appleton</div>
+                                    <div>28 Jun 2020</div>
+                                </div>
                             </div>
-                        </div>
-                        <div id="share-footer" style="align-items: center; width: 170px;">
-                            <span class=""
-                                style="letter-spacing: 4px; color: hsl(212, 23%, 69%);" >
-                                SHARE
-                            </span>
-                            <img src="./images/icon-facebook.svg" alt="facebook share icon">
-                            <img src="./images/icon-twitter.svg" alt="twitter share icon">
-                            <img src="./images/icon-pinterest.svg" alt="pinterest share icon">
-                        </div>
-                        <div id="share-bubble" class="shadow">
-                            <span style="letter-spacing: 4px; color: hsl(212, 23%, 69%);" >
-                                SHARE
-                            </span>
-                            <img src="./images/icon-facebook.svg" alt="facebook share icon">
-                            <img src="./images/icon-twitter.svg" alt="twitter share icon">
-                            <img src="./images/icon-pinterest.svg" alt="pinterest share icon">
-                        </div>
-                        <div id="bubble-arrow"></div>
-                        
-                        <div class="ms-auto rounded-circle bg-light">
-                            <img src="./images/icon-share.svg" alt="share icon"
-                                style="padding: 10px; overflow: hidden;"
-                                id="share-button" >
-                        </div>
-                    </div>   
+                            <div id="share-footer" style="align-items: center; width: 170px;">
+                                <span class=""
+                                    style="letter-spacing: 4px; color: hsl(212, 23%, 69%);" >
+                                    SHARE
+                                </span>
+                                <img src="./images/icon-facebook.svg" alt="facebook share icon">
+                                <img src="./images/icon-twitter.svg" alt="twitter share icon">
+                                <img src="./images/icon-pinterest.svg" alt="pinterest share icon">
+                            </div>                            
+                            
+                            <div class="ms-auto rounded-circle bg-light">
+                                <img src="./images/icon-share.svg" alt="share icon"
+                                    style="padding: 10px; overflow: hidden;"
+                                    id="share-button" >
+                            </div>
+                        </div>   
+                    </div>
                 </div>
-            </div>            
+            </div>
+            <div id="share-bubble" class="shadow">
+                <span style="letter-spacing: 4px; color: hsl(212, 23%, 69%);" >
+                    SHARE
+                </span>
+                <img src="./images/icon-facebook.svg" alt="facebook share icon">
+                <img src="./images/icon-twitter.svg" alt="twitter share icon">
+                <img src="./images/icon-pinterest.svg" alt="pinterest share icon">
+            </div>
+            <div id="bubble-arrow"></div>
         </main>        
         <!-- <footer>
             <p class="attribution px-4 bg-light">
