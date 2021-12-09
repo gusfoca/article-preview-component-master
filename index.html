@@ -14,7 +14,7 @@
                 font-size: 13px;
                 margin: 0;
                 padding: 0;
-            }
+            }            
             main {
                 margin: 11% auto;
                 border-radius: 10px;
@@ -24,14 +24,38 @@
             .img-wrapper {
                 height: 235px;
             }
+            .copy-wrapper {
+                padding: 40px 35px 0px 35px;
+            }
+            .copy-heading {
+                font-size: 1.2em;
+            }
+            #footer {
+                align-items: center;
+                padding: 25px 35px;
+                height: 65px;
+            }
         </style>
         <style media="(min-width: 768px)">
-            .img-wrapper {                
-                height: auto;
+            .img-wrapper {
+                width: 288px;
+                height: 285px;
             }
             main {
                 margin: 33vh auto;
+                padding: 0;
                 width: 730px;
+                height: 285px;
+            }
+            .copy-heading {
+                font-size: 1.6em;
+            }
+            .body-wrapper {
+                padding: 0;
+            }
+            #footer {
+                padding-top: 0px;
+                align-items: flex-start;
             }
         </style>
 
@@ -45,9 +69,9 @@
                     <img src="./images/drawers.jpg" alt="drawers" class="w-100 h-100"
                         style="object-fit: cover; object-position: left top;">
                 </div><!--
-            --><div class="col-12 col-md-7">
-                    <div style="padding: 40px 35px 0px 35px;">
-                        <h5 class="fw-bold pb-2" style="line-height: 1.4em; font-size: 1.26em;">
+            --><div class="body-wrapper col-12 col-md-7">
+                    <div class="copy-wrapper">
+                        <h5 class="copy-heading fw-bold pb-2" style="line-height: 1.4em;">
                             Shift the overall look and feel by adding these wonderful 
                             touches to furniture in your home
                         </h5>
@@ -57,8 +81,7 @@
                             to help you make any room feel complete.
                         </p>
                     </div>
-                    <div id="footer" class="d-flex"
-                        style="align-items: center; padding: 25px 35px; height: 65px;">
+                    <div id="footer" class="d-flex">
 
                         <div id="info-footer" class="d-flex" style="align-items: center;">
                             <img src="./images/avatar-michelle.jpg" alt="avatar" class="rounded-circle"
