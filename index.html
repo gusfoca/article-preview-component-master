@@ -15,6 +15,7 @@
                 color: hsl(214, 17%, 51%);
                 margin: 0;
                 padding: 0;
+                background-color: hsl(210, 46%, 95%);
             }            
             main {
                 position: relative;
@@ -26,6 +27,7 @@
                 overflow: hidden;
                 padding: 0;
                 border-radius: 10px;
+                background-color: white;
             }
             .img-wrapper {
                 height: 235px;
@@ -50,6 +52,19 @@
             }
             #bubble-arrow {
                 display: none;
+            }
+            #share-button {
+                padding: 10px;
+                overflow: hidden;
+            }
+            .share-button-active {
+                filter: brightness(3);
+            }
+            .share-button-container {
+                background-color: hsl(210, 46%, 95%);
+            }
+            .share-button-container-active {
+                background-color: hsl(214, 17%, 51%);
             }
         </style>
         <style media="(min-width: 768px)">
@@ -139,9 +154,8 @@
                                 <img src="./images/icon-pinterest.svg" alt="pinterest share icon">
                             </div>                            
                             
-                            <div class="ms-auto rounded-circle bg-light">
+                            <div id="share-button-container" class="ms-auto rounded-circle share-button-container">
                                 <img src="./images/icon-share.svg" alt="share icon"
-                                    style="padding: 10px; overflow: hidden;"
                                     id="share-button" >
                             </div>
                         </div>   
@@ -172,6 +186,8 @@
                 document.getElementById("share-footer").className = "d-none";
                 document.getElementById("info-footer").className = "d-flex";   
                 document.getElementById("footer").style.backgroundColor = "white";
+                document.getElementById("share-button").classList.toggle("share-button-active");
+                document.getElementById("share-button-container").classList.toggle("share-button-container-active");
                 if(!activeState) {
                     if(window.outerWidth < 768) {
                         document.getElementById("info-footer").className = "d-none";
